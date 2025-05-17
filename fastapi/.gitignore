@@ -1,3 +1,7 @@
+# Ignore everything except fastapi/
+*
+!fastapi/
+
 # OS
 .DS_Store
 
