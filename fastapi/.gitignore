@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+
+# Logs and output
+nohup.out
+*.log
+
+# Node
+node_modules/
+package-lock.json
+
+# IDEs
+.vscode/
+.idea/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# AWS config
+.aws/
