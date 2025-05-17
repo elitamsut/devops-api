@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: currency-converter
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  name: currency-converter
+  type: ClusterIP
+  port: 8000
+
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: localhost
+      paths:
+        - path: /
+          pathType: Prefix
+
+app:
+  env:
+    OXR_API_KEY: ""  # Set via --set or values override during helm install

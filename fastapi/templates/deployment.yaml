@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.service.name | default "currency-converter" }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.service.name | default "currency-converter" }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.service.name | default "currency-converter" }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.service.name | default "currency-converter" }}
+    spec:
+      containers:
+        - name: currency-converter
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          env:
+            - name: OXR_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: currency-converter-secret
+                  key: OXR_API_KEY
