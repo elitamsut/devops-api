@@ -38,4 +38,3 @@ package-lock.json
 .ipynb_checkpoints/
 
 # AWS config
-.aws/
