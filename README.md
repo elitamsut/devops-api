@@ -9,3 +9,11 @@ docker ps
 docker logs 242271da2aa3
 
 elitamsut@Elis-Laptop fastapi % docker run -d -p 8000:8000 -e OXR_API_KEY='api-key' fastapi-app
+
+
+
+elitamsut@Elis-Laptop fastapi % cd ..
+elitamsut@Elis-Laptop ~ % helm install fastapi ./fastapi \
+--namespace currency-converter \
+--create-namespace \
+--set app.env.OXR_API_KEY='api-key'
