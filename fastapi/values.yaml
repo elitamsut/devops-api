@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: currency-converter
+  repository: elitamsut/fastapi-app
   tag: latest
   pullPolicy: IfNotPresent
 
