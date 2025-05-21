@@ -36,3 +36,16 @@ elitamsut@Elis-Laptop ~ % curl -X POST http://localhost:8000/ \
 elitamsut@Elis-Laptop ~ % curl http://localhost:8000/date/1697059200
 
 
+
+conversion_rate{currency="XDR"} 0.762232
+conversion_rate{currency="XOF"} 617.454505
+conversion_rate{currency="XPD"} 0.00085341
+conversion_rate{currency="XPF"} 112.327366
+conversion_rate{currency="XPT"} 0.0011274
+conversion_rate{currency="YER"} 250.349961
+conversion_rate{currency="ZAR"} 18.825459
+conversion_rate{currency="ZMW"} 21.528535
+conversion_rate{currency="ZWL"} 322.0
+elitamsut@Elis-Laptop ~ % curl http://localhost:8000/metrics
+
+
